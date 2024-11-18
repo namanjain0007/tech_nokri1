@@ -146,7 +146,7 @@ const App = () => {
         }
 
         // Token server ke sath validate karte hain
-        const response = await axios.get("http://localhost:5012/validate", {
+        const response = await axios.get("https://tech-nokri1.onrender.com/validate", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
