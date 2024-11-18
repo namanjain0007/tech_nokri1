@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink,useNavigate } from "react-router-dom";
 import "../CSS/Login.css";
 import { useContext, useState } from "react";
 import Context from "../../Context/Context";
@@ -53,9 +53,9 @@ const Login = () => {
             <button>
               <b>
                 New user?
-                <a href="/registration_page" className="register-link">
+                <NavLink to="/registration_page" className="register-link">
                   -Register here
-                </a>
+                </NavLink>
               </b>
             </button>
           </p>
