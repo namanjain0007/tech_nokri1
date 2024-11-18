@@ -1,0 +1,24 @@
+.container {
+  height: 100vh;
+  background-image: url("../../assets/h1_hero.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 850px;
+}
+.container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.hero-caption h1 {
+  font-size: 80px;
+  font-weight: 900;
+  margin-bottom: 78px;
+  color: #28395a;
+  /* padding-right: 29px; */
+  font-family: "Muli", sans-serif;
+
+  line-height: 1.2;
+}

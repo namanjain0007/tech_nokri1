@@ -1,0 +1,83 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Header Style */
+.navbar-header-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Light background color */
+  display: flex;
+  justify-content: space-between; /* Space out logo and links */
+  align-items: center;
+  height: 13vh; /* Maintain the height of the navbar */
+  padding: 0 30px; /* Adjust padding */
+  z-index: 1000;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Navbar Image Section (Logo) */
+.navbar-image-div {
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar Links Container */
+.navbar-links-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* Navbar Links List */
+.navbar-linkss {
+  display: flex;
+  gap: 50px; /* Space between links */
+}
+
+/* Navbar Links Styling */
+.navbar-linkss a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-weight: 500; /* Slightly bolder font */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Navbar Links Hover Effect */
+.navbar-linkss a:hover {
+  color: #e74c3c; /* Red color on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar-header-div {
+    height: auto; /* Adjust height for mobile */
+    flex-direction: column; /* Stack logo and links vertically */
+    padding: 10px;
+  }
+
+  .navbar-links-div {
+    width: 100%; /* Ensure links take up the full width */
+    justify-content: center; /* Center align links on mobile */
+  }
+
+  .navbar-linkss {
+    gap: 20px; /* Reduce gap on mobile */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center the links */
+  }
+
+  .navbar-linkss a {
+    font-size: 16px; /* Smaller font size for mobile */
+    padding: 8px 12px; /* Adjust padding */
+  }
+}

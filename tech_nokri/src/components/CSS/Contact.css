@@ -1,0 +1,131 @@
+/* General Section Styling */
+.contact-contact-section {
+  padding: 40px 0 10px;
+}
+
+/* Container Styling */
+.contact-contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Form Container Styling */
+.contact-contact-form-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Row Styling */
+.contact-contact-row {
+  background-color: #4a5494;
+  color: #ecf0f1;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Title Styling */
+.contact-contact-contact-title {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.contact-contact-form-contact {
+  width: 100%;
+}
+
+.contact-contact-form-contact textarea,
+.contact-contact-form-contact input {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ecf0f1;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-contact-form-contact input[type="email"],
+.contact-contact-form-contact input[type="text"] {
+  color: #333;
+}
+
+/* Input Focus Styling */
+.contact-contact-form-contact input:focus,
+.contact-contact-form-contact textarea:focus {
+  border-color: #4a5494;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(74, 84, 148, 0.3);
+}
+
+/* Form Group Styling */
+.contact-contact-form-group {
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.contact-contact-form-group.text-center .btn-primary {
+  background-color: red;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-contact-form-group.text-center .btn-primary:hover {
+  background-color: #3e477a;
+}
+
+/* Contact Info Icons */
+.contact-contact-info__icon {
+  color: #1e201e;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.contact-container {
+  background-color: #eaedff;
+  font-family: cursive;
+}
+.contact-contact-info__icon i {
+  color: #4a5494;
+  font-size: 18px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .contact-contact-row {
+    padding: 20px;
+  }
+
+  .contact-contact-form-container {
+    padding: 20px;
+  }
+
+  .contact-contact-contact-title {
+    font-size: 24px;
+  }
+
+  .contact-contact-info__icon {
+    font-size: 14px;
+  }
+  .contact-contact-info__icon-btn {
+    font-size: 14px;
+    background-color: red;
+  }
+}

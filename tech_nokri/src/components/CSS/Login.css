@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif; /* Use a modern and elegant font */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Container for login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #333;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("https://www.technokri.com/assets/img/gallery/cv_bg.jpg"); /* Dark gradient overlay */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+/* Form Card Styling */
+.login-container .form-card {
+  max-width: 450px;
+  width: 100%;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slight transparency for a modern look */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+  margin: 20px;
+  position: relative;
+  animation: fadeInUp 0.7s ease-in-out; /* Add a subtle animation */
+}
+
+/* Animation for the form */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Styling for New User */
+.text-center p {
+  font-size: 18px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.text-center button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.text-center button:hover {
+  color: #ffcc00; /* Add a nice hover color */
+}
+
+.text-center .register-link {
+  color: #ffcc00; /* Change the link color to a more vibrant yellow */
+  margin-left: 5px;
+  text-decoration: none;
+  font-weight: 600; /* Make it bold for emphasis */
+}
+
+.text-center .register-link:hover {
+  text-decoration: underline;
+}
+
+/* Form Styling */
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 1px; /* Slightly increase letter spacing */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Make the input corners more rounded */
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #ffcc00;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.5); /* Add a glowing effect when focused */
+}
+
+/* Login Button */
+.btn.head-btn1 {
+  padding: 15px 40px;
+  width: 100%;
+  height: 50px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Add shadow for depth */
+}
+
+.btn.head-btn1:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Button lifts when hovered */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container .form-card {
+    padding: 20px;
+  }
+
+  .form-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn.head-btn1 {
+    width: 100%; /* Ensure button fits on smaller screens */
+  }
+}

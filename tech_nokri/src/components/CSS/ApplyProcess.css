@@ -1,0 +1,114 @@
+.apply-process-area {
+  background-image: url("https://www.technokri.com/assets/img/gallery/how-applybg.png");
+}
+.apply-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pt-150 {
+  padding-bottom: 150px;
+}
+.pb-150 {
+  padding-top: 150px;
+}
+.apply-process-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.section-tittle {
+  text-align: center !important;
+}
+.section-tittle h2 {
+  color: #28395a;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 95px;
+}
+.section-tittle span {
+  color: #fb246a;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  display: block;
+}
+.section-tittle.white-text h2 {
+  color: #fff;
+}
+.single-process text-center mb-30 {
+  padding: 44px 28px;
+  background: #26317f;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.text-center {
+  text-align: center !important;
+}
+.apply-process-area .single-process .process-ion {
+  transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+}
+.apply-process-area .single-process .process-ion {
+  transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+}
+.apply-process-area .single-process .process-ion span {
+  font-size: 60px;
+  margin-bottom: 13px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.flaticon-search:before {
+  content: "\f108";
+}
+.apply-process-area .single-process .process-cap h5 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.single-process {
+  padding: 44px 28px;
+  background: #26317f;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.apply-process-area .single-process .process-cap p {
+  color: #a5aaca;
+}
+p {
+  font-family: "Muli", sans-serif;
+  /* color: #506172; */
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.col-lg-4 col-md-6 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.process-cap button {
+  border: none;
+}
+a {
+  text-decoration: none;
+}

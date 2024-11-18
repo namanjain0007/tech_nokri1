@@ -1,0 +1,105 @@
+/* Container for the entire technologies section */
+.container-technologies {
+  background-color: #f5f5f5;
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 1300px; /* Increased max width to fit larger cards */
+  margin: 0 auto;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+/* Section heading styling */
+.heading-technologies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.heading-technologies h2 {
+  font-size: 48px;
+  color: #2c3e50;
+  font-weight: bold;
+  font-family: "Muli", sans-serif;
+  margin-bottom: 0;
+}
+
+/* Container for technology items */
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Dynamic grid based on available space */
+  gap: 20px; /* Space between items */
+  justify-items: center;
+}
+
+/* Individual technology card */
+.course-div {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  text-align: center;
+  height: 300px; /* Increased height */
+  width: 280px; /* Set a uniform width */
+  position: relative; /* Allows course name to be positioned at the bottom */
+}
+
+.course-div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Technology image */
+.tech-container img {
+  width: 100%;
+  height: 150px; /* Increased height for better image display */
+  object-fit: contain; /* Maintain the aspect ratio without cropping */
+  background-color: transparent; /* Clear image background */
+  transition: transform 0.3s ease;
+}
+
+.course-div:hover img {
+  transform: scale(1.05);
+}
+
+/* Course name displayed at the bottom center */
+.course-div span {
+  display: block;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the text horizontally */
+}
+
+/* Anchor tag styling */
+.tech-container a {
+  text-decoration: none;
+  color: #2c3e50;
+}
+
+/* Text inside course-div */
+.course-div p {
+  font-size: 16px;
+  color: #34495e;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.search-div {
+  /* border: 2px solid red; */
+  /* display: flex; */
+  height: 10vh;
+}
+.jobs-div {
+  font-family: "Muli", sans-serif;
+}

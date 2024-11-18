@@ -1,0 +1,59 @@
+# # Logs
+# logs
+# *.log
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+# pnpm-debug.log*
+# lerna-debug.log*
+
+# node_modules
+# # Ignore node_modules in backend folder
+# /backend/node_modules/
+# dist
+# dist-ssr
+# *.local
+
+# # Editor directories and files
+# .vscode/*
+# !.vscode/extensions.json
+# .idea
+# .DS_Store
+# *.suo
+# *.ntvs*
+# *.njsproj
+# *.sln
+# *.sw?
+
+# Ignore node_modules in frontend folder
+/tech_nokri/node_modules/
+
+# Ignore node_modules in backend folder
+/server/node_modules/
+
+# Ignore general node_modules in the root folder (if any)
+/node_modules/
+
+# Ignore build and dist files
+dist
+dist-ssr
+*.local
+
+# Ignore log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Ignore editor-specific files and directories
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

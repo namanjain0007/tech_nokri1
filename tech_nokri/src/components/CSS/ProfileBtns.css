@@ -1,0 +1,204 @@
+/* Container for profile and buttons */
+.navbar-btnss-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+  position: relative;
+}
+
+/* Profile avatar and dropdown */
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    #1e3c72,
+    #2a5298
+  ); /* Deep blue gradient */
+  padding: 12px 18px;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+
+.profile-avatar:hover {
+  background: linear-gradient(
+    135deg,
+    #2a5298,
+    #1e3c72
+  ); /* Gradient inversion */
+  transform: translateY(-5px) scale(1.05); /* Lifts up with smooth scaling */
+}
+
+.profile-avatar img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 12px;
+  transition: all 0.3s ease;
+}
+
+.profile-avatar .username {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.profile-avatar:hover .username {
+  color: #ffeb3b; /* Change color to gold */
+}
+
+/* Dropdown options with animation */
+.profile-options {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-dropdown:hover .profile-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px); /* Slide up with ease */
+}
+
+.profile-link {
+  color: #333;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.profile-link:hover {
+  background-color: #ff6f61; /* Smooth hover effect */
+  color: #fff;
+  padding-left: 20px; /* Sliding effect */
+}
+
+.profile-link:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6f61;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.profile-link:hover:before {
+  transform: scaleX(1); /* Underline animation on hover */
+}
+
+/* Logout button with smooth scaling */
+.logout-btn {
+  padding: 12px 20px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 8px;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-3px) scale(1.05); /* Subtle lifting on hover */
+}
+
+.logout-btn:active {
+  transform: translateY(0px) scale(1); /* Reset on click */
+}
+
+/* Buttons for login/register with animations */
+.navbar-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-btn {
+  padding: 15px 30px;
+  margin: 0 15px;
+  background: linear-gradient(
+    135deg,
+    #3498db,
+    #2980b9
+  ); /* Elegant blue gradient */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.navbar-btn:hover {
+  background: linear-gradient(
+    135deg,
+    #2980b9,
+    #3498db
+  ); /* Gradient inversion */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+.navbar-btn:active {
+  transform: translateY(0px) scale(0.98); /* Subtle press effect */
+}
+
+.navbar-btn a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.navbar-btn a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.navbar-btn:hover a::after {
+  width: 100%;
+  left: 0; /* Expands underline */
+}
+
+/* Additional styling */
+.navbar-logreg-div {
+  display: flex;
+  align-items: center;
+}
+
+.profile-dropdown {
+  position: relative;
+}

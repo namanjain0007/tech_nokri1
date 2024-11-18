@@ -1,0 +1,57 @@
+.find-jobs-body {
+  background-color: #f0f3ff;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center; /* Horizontally centers the .title div */
+  align-items: center; /* Vertically centers the .title div */
+  height: 60vh;
+  background-image: url("https://www.technokri.com/assets/img/hero/about.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-color: rgba(31, 43, 123, 0.8); /* Semi-transparent color */
+  background-blend-mode: overlay; /* Blend the color and image */
+}
+
+.main-container h2 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.title {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.technologies-container {
+  /* background-color: #f0f3ff; */
+  margin-top: 1vh;
+  /* border: 2px solid black; */
+  height: 100%;
+}
+
+.courses-container {
+  font-family: "Muli", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #7fa1c3;
+  padding: 40px 20px;
+  margin: 10vh auto;
+  height: 100%;
+  width: 90%;
+}
+
+.search-div {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}

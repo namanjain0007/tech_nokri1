@@ -1,0 +1,87 @@
+/* Job Registration Form Styles */
+.jobreg-body {
+  font-family: Arial, sans-serif;
+  background-color: #eef3f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.jobreg-form-container {
+  background-color: #b5c0d0;
+  padding: 15px; /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 550px; /* Slightly reduced width */
+  width: 100%;
+  color: #333;
+}
+
+.jobreg-form-container h2 {
+  color: black;
+  font-family: math;
+
+  text-align: center;
+  /* font-size: 16px; Further reduced font size */
+  margin-bottom: 1rem;
+}
+
+.jobreg-form-group {
+  margin-bottom: 0.8rem; /* Reduced spacing between fields */
+}
+
+.jobreg-form-group label {
+  display: block;
+  font-weight: 500; /* Slightly bolded labels */
+  color: #555;
+  margin-bottom: 0.2rem;
+  font-size: 12px; /* Further reduced label font size */
+}
+
+.jobreg-form-control {
+  width: 100%;
+  padding: 8px; /* Further reduced padding */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 12px; /* Further reduced input font size */
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jobreg-form-control:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+.jobreg-btn {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 12px 20px; /* Adjusted padding for a better look */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jobreg-btn:hover {
+  background-color: #357abd; /* Darker shade on hover */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.jobreg-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Focus shadow */
+}
+
+.jobreg-btn:active {
+  transform: translateY(1px); /* Slight press effect when clicked */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

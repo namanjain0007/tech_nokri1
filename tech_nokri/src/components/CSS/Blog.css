@@ -1,0 +1,161 @@
+/* Blog Area Styles */
+.blog-home-blog-area {
+  padding: 80px 0;
+  background-color: #f4f7fa; /* Lighter background for contrast */
+}
+
+.blog-h-padding {
+  padding: 0 15px;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title Styles */
+.blog-section-tittle {
+  margin-bottom: 60px;
+}
+
+.blog-section-tittle span {
+  color: #ff6b6b; /* Accent color */
+  font-size: 20px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+  letter-spacing: 1px; /* Spacing for better readability */
+}
+
+.blog-section-tittle h2 {
+  font-size: 42px; /* Larger heading */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Flexbox Layout */
+.blog-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 30px; /* Increased gap between blog items */
+  justify-content: center; /* Center the items */
+}
+
+/* Blog Item Styles */
+.blog-col-lg-12,
+.blog-col-xl-6 {
+  flex: 1 1 300px; /* Flexible width with a minimum */
+  max-width: 400px; /* Control maximum width */
+}
+
+.blog-home-blog-single {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0; /* Subtle border for separation */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effects */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-home-blog-single:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Blog Image Styles */
+.blog-blog-img-cap {
+  position: relative;
+}
+
+.blog-blog-img img {
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid #ff6b6b; /* Bottom border for the image */
+}
+
+/* Blog Date Styles */
+.blog-blog-date {
+  position: absolute;
+  top: 15px; /* Increased top position */
+  left: 15px; /* Increased left position */
+  background-color: #ff6b6b; /* Date background color */
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.blog-blog-date span {
+  font-size: 28px; /* Larger date */
+  font-weight: bold;
+  display: block;
+}
+
+.blog-blog-cap {
+  padding: 25px; /* Increased padding for better spacing */
+}
+
+.blog-blog-cap p {
+  font-size: 16px; /* Slightly larger font */
+  color: #999;
+  margin-bottom: 10px; /* Spacing below */
+}
+
+.blog-blog-cap h3 {
+  font-size: 24px; /* Larger title */
+  margin: 10px 0;
+  color: #333;
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.blog-blog-cap h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-blog-cap h3 a:hover {
+  color: #ff6b6b; /* Accent color on hover */
+}
+
+/* Read More Button */
+.blog-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  color: #fff; /* White text for contrast */
+  background-color: #ff6b6b; /* Button background */
+  padding: 10px 15px; /* Button padding */
+  border-radius: 5px; /* Rounded corners */
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Button hover effect */
+}
+
+.blog-more-btn:hover {
+  background-color: #e74c3c; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 991px) {
+  .blog-col-xl-6,
+  .blog-col-lg-6,
+  .blog-col-md-6 {
+    flex: 1 1 100%; /* Stack items on smaller screens */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blog-section-tittle h2 {
+    font-size: 32px; /* Smaller heading on mobile */
+  }
+
+  .blog-blog-cap h3 {
+    font-size: 22px; /* Smaller title on mobile */
+  }
+
+  .blog-blog-cap p {
+    font-size: 14px; /* Smaller text on mobile */
+  }
+}

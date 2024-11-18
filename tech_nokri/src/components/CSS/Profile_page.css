@@ -1,0 +1,352 @@
+.ProfilePage {
+  display: flex;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+  margin-top: -15vh;
+  padding-top: 0;
+  position: relative;
+}
+
+.ProfilePage-sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ProfilePage-sidebar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.ProfilePage-main-content {
+  flex-grow: 1;
+  background-color: #ecf0f1;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  transition: background-color 0.3s;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.ProfilePage-header {
+  background-color: #34495e;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.ProfilePage-header h4 {
+  color: white;
+  font-weight: bold;
+}
+
+.ProfilePage-job-count {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.ProfilePage-userDetails {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ProfilePage-userDetails h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+/* Colorful User Details */
+.ProfilePage-userDetails p:nth-child(2) {
+  color: #e74c3c; /* Red */
+}
+
+.ProfilePage-userDetails p:nth-child(3) {
+  color: #3498db; /* Blue */
+}
+
+.ProfilePage-userDetails p:nth-child(4) {
+  color: #2ecc71; /* Green */
+}
+
+.ProfilePage-userDetails p:nth-child(5) {
+  color: #f1c40f; /* Yellow */
+}
+
+.ProfilePage-userDetails p:nth-child(6) {
+  color: #9b59b6; /* Purple */
+}
+
+.ProfilePage-userDetails p:nth-child(7) {
+  color: #e67e22; /* Orange */
+}
+
+.ProfilePage-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.ProfilePage-btn-primary {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.ProfilePage-btn-primary:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.ProfilePage-btn-danger {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+.ProfilePage-btn-danger:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .ProfilePage {
+    flex-direction: column;
+  }
+
+  .ProfilePage-sidebar {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .ProfilePage-main-content {
+    padding: 10px;
+  }
+}
+
+/*  */
+
+/* Container styling */
+/* Container styling */
+/* Container styling */
+.ProfilePage-form-container-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  background: linear-gradient(
+    135deg,
+    #f1f5f9,
+    #e2e8f0
+  ); /* Gradient background */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #333;
+  transition: transform 0.3s ease; /* Animate container */
+}
+
+.ProfilePage-form-container-container:hover {
+  transform: scale(1.02); /* Slight scaling effect on hover */
+}
+
+/* Title styling */
+.ProfilePage-form-container-title h4 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff4081; /* Vibrant pink */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph styling for each detail */
+.ProfilePage-form-container-paragraph p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #555;
+  transition: color 0.3s ease; /* Transition for text color */
+}
+
+.ProfilePage-form-container-paragraph p:hover {
+  color: #ff4081; /* Change color on hover */
+}
+
+/* Bold text within paragraphs */
+.ProfilePage-form-container-paragraph p b {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Styling the HR Email span to stand out */
+.ProfilePage-form-container-paragraph p span {
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.ProfilePage-form-container-paragraph p span:hover {
+  color: #ff4081; /* Change color on hover */
+}
+
+/* Apply button styling */
+.ProfilePage-form-container-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff4081, #ff6f61); /* Colorful gradient */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.ProfilePage-form-container-button:hover {
+  background: linear-gradient(
+    135deg,
+    #ff6f61,
+    #ff4081
+  ); /* Reverse gradient on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+  animation: pulse 0.6s infinite; /* Pulse animation */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*  */
+
+/* .ProfilePage-header h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  animation: fadeInText 0.6s ease-in-out;
+}
+
+.ProfilePage-job-count {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.ProfilePage-job-count:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.ProfilePage-job-count-applied {
+  color: #ffc107;
+  background-color: rgba(255, 193, 7, 0.3);
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+.ProfilePage-header h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 10px #4facfe,
+      0 0 20px #4facfe;
+  }
+  100% {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 20px #4facfe,
+      0 0 30px #00f2fe;
+  }
+}
+
+.ProfilePage-job-count {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 12px 18px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, background 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ProfilePage-job-count:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+
+.ProfilePage-job-count:hover {
+  transform: scale(1.1) rotate(1deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.ProfilePage-job-count:hover:before {
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.ProfilePage-job-count-applied {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #ffffff;
+}
+
+.ProfilePage-job-count-applied:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+}

@@ -1,0 +1,149 @@
+/* Blurred Background when Modal is Open */
+body.modal-open .app-content {
+  filter: blur(10px);
+  transition: filter 0.4s ease;
+}
+
+/* Modal Overlay */
+.modal.fade.show {
+  background-color: rgba(0, 0, 0, 0.4); /* Dark translucent overlay */
+  backdrop-filter: blur(3px); /* Adds subtle blur to the overlay */
+}
+
+/* Modal Animation */
+@keyframes modalFadeIn {
+  from {
+    transform: scale(0.8) translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8) translateY(-20px);
+    opacity: 0;
+  }
+}
+
+.modal-dialog {
+  margin: 12vh auto;
+  max-width: 600px;
+  animation: modalFadeIn 0.5s ease forwards;
+}
+
+/* Modal Content Styling */
+.modal-content {
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  transform: scale(0.95);
+  animation: modalFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+/* Header Styling */
+.modal-header {
+  background: linear-gradient(145deg, #6e85ff, #4b5ddb);
+  color: #fff;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #3e4cb2;
+}
+
+.modal-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Close Button Styling */
+.modal-header .close {
+  color: #fff;
+  font-size: 1.5rem;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.modal-header .close:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Body Content Styling */
+.modal-body {
+  padding: 1.6rem;
+  color: #444;
+  background: #fafafa;
+  animation: modalFadeIn 0.4s ease forwards;
+}
+
+.modal-body p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  transform: translateX(-10px);
+  opacity: 0;
+  animation: slideIn 0.3s ease forwards;
+}
+
+.modal-body p:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.modal-body p:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+/* Text Highlighting */
+.modal-body strong {
+  color: #4b5ddb;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.modal-body p:hover strong {
+  color: #3e4cb2;
+}
+
+/* Keyframes for Text Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Button Styling for Inside Modal */
+.view-job {
+  background-color: #4b5ddb;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.view-job:hover {
+  background-color: #3e4cb2;
+  transform: scale(1.05);
+}

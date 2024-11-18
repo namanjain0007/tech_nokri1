@@ -1,0 +1,121 @@
+/* Background section styling */
+.online-cvcv-bgsection-overlypt-80pb-80 {
+  margin-top: 5vh;
+  background-image: url("https://www.technokri.com/assets/img/gallery/cv_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  background-color: rgba(31, 43, 123, 0.8);
+  height: 50vh;
+}
+
+.online-cvcv-bgsection-overlypt-80pb-80::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 43, 123, 0.8);
+  z-index: 1;
+}
+
+/* Container styling */
+.containerr {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 2;
+  height: 100%;
+}
+
+/* Row styling */
+.rowjustify-content-center {
+  justify-content: center !important;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* Column styling */
+.col-xl-10 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  z-index: 2;
+  height: 100%;
+}
+
+/* Caption text styling */
+.cv-captiontext-center {
+  text-align: center !important;
+}
+
+.pera2 {
+  font-family: "Muli", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 0;
+  line-height: 1.3;
+  font-size: 33px;
+  margin-bottom: 51px;
+}
+
+.pera2 p {
+  font-size: 35px;
+  margin-top: 0;
+  display: block;
+  margin-bottom: 51px;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* Button styling with hover effect */
+.border-btn2border-btn4 {
+  position: relative;
+  display: inline-block;
+  padding: 19px 69px;
+  color: white;
+  border: 1px solid #8b92dd;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s linear;
+  z-index: 1;
+}
+
+/* Hover effect for button */
+.border-btn2border-btn4::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #8b92dd;
+  z-index: -1;
+  transition: top 0.4s ease;
+}
+
+.border-btn2border-btn4:hover::before {
+  top: 0;
+}
+
+.border-btn2border-btn4:hover {
+  color: #1f2b7b; /* Adjust for better contrast on hover */
+}

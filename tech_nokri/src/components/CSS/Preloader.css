@@ -1,0 +1,58 @@
+/* Preloader container */
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Optional white overlay */
+  z-index: 9999;
+}
+
+/* Circle animation styling for the image */
+.preloader-image-container {
+  width: 100px; /* Width of the circle border */
+  height: 100px; /* Height of the circle border */
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: #fb246a; /* Top border color */
+  border-bottom-color: transparent; /* Bottom border color */
+  border-left-color: transparent; /* Left border color */
+  border-right-color: transparent; /* Right border color */
+  z-index: 10;
+  border-radius: 50%; /* Makes the border circular */
+  -webkit-box-shadow: 0 1px 5px 0 rgba(35, 181, 185, 0.15);
+  box-shadow: 0 1px 5px 0 rgba(35, 181, 185, 0.15);
+  background-color: #ffffff;
+
+  /* Add rotation only to the container (circle border) */
+  animation: rotate 2s linear infinite; /* Only rotates the border */
+}
+
+/* Animation for rotating the border */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Image styling to fit inside the circular border */
+.preloader-image {
+  width: 100px; /* Set image size */
+  height: 100px; /* Ensure it is square */
+  border-radius: 50%; /* Make it circular */
+  object-fit: contain; /* Ensure the image fits without cropping */
+
+  /* Position image at the center and ensure it does not rotate */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
