@@ -119,7 +119,7 @@ const App = () => {
       const token = sessionStorage.getItem("jwt");
       if (!token) {
         // Token nahi mila
-        console.log("token nai arra he");
+        // console.log("token nai arra he");
 
         setIsLoggedIn(false);
         setLogInData({});
@@ -134,7 +134,7 @@ const App = () => {
         const currentTime = Date.now() / 1000; // Current time in seconds
 
         if (decodedToken.exp < currentTime) {
-          console.log("token expired");
+          // console.log("token expired");
 
           // Token expire hone par
           sessionStorage.removeItem("jwt");
