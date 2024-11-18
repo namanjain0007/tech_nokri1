@@ -39,7 +39,7 @@ const register = async (req, res) => {
     if (password !== confirmPassword) {
       console.log(password, confirmPassword);
 
-      return res.status(400).json({ msg: "Passwords do not match NAMAN" });
+      return res.status(400).json({ msg: "Passwords do not match" });
     }
 
     const saltRound = 5;
