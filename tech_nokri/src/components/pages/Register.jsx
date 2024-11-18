@@ -98,13 +98,13 @@ const Register = () => {
         }
       );
       // console.log(response.data);
-      setSuccessMessage("Registered successful");
+      setSuccessMessage("Registeration successful");
       setErrorMessage("");
       // alert("User registered successfully");
       // console.log("response.token", response);
 
       // console.log(response);
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         setTimeout(() => {
           navigate("/login");
         }, 500);
