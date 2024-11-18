@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import Context from "../Context/Context";
-import "./Css/Testimonial.css";
+import "./CSS/Testimonial.css";
 
 const Testimonial = () => {
   const { testimonials } = useContext(Context);
