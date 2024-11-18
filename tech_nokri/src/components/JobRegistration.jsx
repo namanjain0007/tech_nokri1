@@ -37,7 +37,7 @@ const JobRegistration = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5012/jobregistration",
+        "https://tech-nokri1.onrender.com/jobregistration",
         formData,
         {
           headers: {
