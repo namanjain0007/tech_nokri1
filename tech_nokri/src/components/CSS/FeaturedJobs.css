@@ -133,17 +133,21 @@
 
 /* FeaturedJobs Component CSS */
 
+
+/* Featured Jobs Area */
 .featured-job-area-notlogin {
   padding: 60px 0;
   background: linear-gradient(145deg, #f3f4f6, #e2e7ec);
   font-family: "Roboto", sans-serif;
 }
 
+/* Container Styling */
 .container-notlogin {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Section Title Styling */
 .section-tittle-notlogin {
   margin-bottom: 40px;
   text-align: center;
@@ -161,25 +165,32 @@
   color: #333;
 }
 
+/* Row Styling */
 .row-notlogin {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
-.col-12-notlogin,
+/* Column Styling */
 .col-md-4-notlogin {
-  flex: 1 1 calc(33.333% - 20px);
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
   display: flex;
   justify-content: center;
-  max-width: 33.333%;
+  align-items: stretch;
 }
 
+/* Job Link */
 .job-link-notlogin {
   text-decoration: none;
   color: inherit;
+  display: flex;
+  height: 100%; /* Ensure full height for alignment */
 }
 
+/* Job Container with Fixed Sizes */
 .job-container-notlogin {
   background: #fff;
   border-radius: 10px;
@@ -188,7 +199,8 @@
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 100%;
+  height: 100%; /* Ensure containers are equal height */
 }
 
 .job-container-notlogin:hover {
@@ -196,35 +208,38 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Uniform Company Image Section */
 .company-img-notlogin {
   width: 100%;
   height: 180px; /* Fixed height for uniformity */
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4f6;
 }
 
 .company-img-notlogin img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fills the container without stretching */
-  transition: transform 0.3s;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ensures images fill the container proportionally */
 }
 
-.company-img-notlogin:hover img {
-  transform: scale(1.05);
-}
-
+/* Job Details */
 .job-details-notlogin {
   padding: 20px;
+  flex: 1; /* Ensures the content takes remaining space */
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
 }
 
 .job-details-notlogin h4 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   color: #333;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .job-details-notlogin ul {
@@ -232,41 +247,26 @@
   padding: 0;
   margin: 0;
   color: #666;
+  text-align: center;
 }
 
 .job-details-notlogin li {
   font-size: 14px;
-  display: flex;
-  align-items: center;
   margin-bottom: 5px;
 }
 
-.job-details-notlogin li i {
-  margin-right: 6px;
-  color: #4a90e2;
-}
-
+/* Apply Button */
 .apply-button-notlogin {
   background-color: #4a90e2;
-  padding: 12px 0;
+  padding: 12px;
   text-align: center;
   transition: background-color 0.3s;
   border-top: 1px solid #e6e6e6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .apply-button-notlogin:hover {
   background-color: #357ab7;
-}
-
-.view-details-button-notlogin {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.view-details-button-notlogin i {
-  margin-right: 8px;
 }
