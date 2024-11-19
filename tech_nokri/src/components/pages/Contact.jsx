@@ -64,10 +64,14 @@ const Contact = () => {
               </div>
               <center>
 <div style={{ textAlign: "center" }}>
-              {errorMessage && <p className="error">{errorMessage}</p>}
-              {successMessage && <p className="success">{successMessage}</p>}
-            </div>                <div className="contact-contact-col-lg-8 offset-lg-2">
-                 
+{/*               {errorMessage && <p className="error">{errorMessage}</p>}
+              {successMessage && <p className="success">{successMessage}</p>} */}
+              {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+                {successMessage && (
+                  <p style={{ color: "greenyellow" }}>{successMessage}</p>
+                )}
+            </div>                
+                <div className="contact-contact-col-lg-8 offset-lg-2"> 
                   <form
                     onSubmit={handleSubmit}
                     className="contact-contact-form-contact contact_form"
