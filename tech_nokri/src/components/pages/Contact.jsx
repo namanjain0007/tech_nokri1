@@ -62,7 +62,7 @@ const Contact = () => {
               <div className="contact-contact-col-12">
                 <h2 className="contact-contact-title">Get in Touch</h2>
               </div>
-              <center
+              <center>
 <div style={{ textAlign: "center" }}>
               {errorMessage && <p className="error">{errorMessage}</p>}
               {successMessage && <p className="success">{successMessage}</p>}
