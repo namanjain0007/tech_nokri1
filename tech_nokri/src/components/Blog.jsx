@@ -58,7 +58,8 @@ const Blog = () => {
                   </div>
                   <div className="blog-blog-cap">
                     <p>| Properties</p>
-                   <NavLink to="/">
+                    <h3>
+                      <NavLink to="/">
                         Footprints in Time is perfect House in Kurashiki
                       </NavLink>
                     </h3>
