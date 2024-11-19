@@ -29,9 +29,9 @@ const Home = () => {
       {/* Online CV Area Start  */}
       <div>
         <OnlineCv
-          title={"Enhance Your Career with Our Online Job Applications!"}
-          path={"/findajob"}
-          btnName={"FIND A JOB"}
+          title={"Register to Find Right Tech Job"}
+          path={"/registration_page"}
+          btnName={"Upload Your CV"}
         />
       </div>
       <div>
