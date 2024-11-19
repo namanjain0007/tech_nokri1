@@ -1,4 +1,6 @@
 import "./CSS/Blog.css";
+import { NavLink } from "react-router-dom";
+
 
 const Blog = () => {
   return (
@@ -30,13 +32,13 @@ const Blog = () => {
                   <div className="blog-blog-cap">
                     <p>| Properties</p>
                     <h3>
-                      <a href="single-blog.html">
+                       <NavLink to="/">
                         Footprints in Time is perfect House in Kurashiki
-                      </a>
+                      </NavLink>
                     </h3>
-                    <a href="/contact" className="blog-more-btn">
+                    <NavLink to="/findajob" className="blog-more-btn">
                       Read more »
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -56,14 +58,13 @@ const Blog = () => {
                   </div>
                   <div className="blog-blog-cap">
                     <p>| Properties</p>
-                    <h3>
-                      <a href="single-blog.html">
+                   <NavLink to="/">
                         Footprints in Time is perfect House in Kurashiki
-                      </a>
+                      </NavLink>
                     </h3>
-                    <a href="/contact" className="blog-more-btn">
+                    <NavLink to="/findajob" className="blog-more-btn">
                       Read more »
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
