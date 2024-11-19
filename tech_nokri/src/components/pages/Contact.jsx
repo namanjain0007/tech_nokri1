@@ -30,18 +30,21 @@ const Contact = () => {
         }
       );
 
-      setSuccessMessage("message sent successful");
-      setErrorMessage("");
+      
       // console.log(response.data);
-      if (response.statusText === "OK") {
-        setContactData({
-          username: "",
-          email: "",
-          mobile: "",
-          message: "",
-        });
+      if (response.status === 200) {
+        setTimeout(() => {
+          setSuccessMessage("message sent successful");
+      setErrorMessage("");
+          setContactData({
+            username: "",
+            email: "",
+            mobile: "",
+            message: "",
+          });
+        }, 1000);
       }
-      alert("message sent successfully");
+      // alert("message sent successfully");
     } catch (error) {
       // console.error(error.response.data.msg);
       setErrorMessage(error.response.data.msg);
@@ -59,14 +62,13 @@ const Contact = () => {
               <div className="contact-contact-col-12">
                 <h2 className="contact-contact-title">Get in Touch</h2>
               </div>
-              <center>
+              <center
+                {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+                {successMessage && (
+                  <p style={{ color: "greenyellow" }}>{successMessage}</p>
+                )}
                 <div className="contact-contact-col-lg-8 offset-lg-2">
-                  {errorMessage && (
-                    <p style={{ color: "red" }}>{errorMessage}</p>
-                  )}
-                  {successMessage && (
-                    <p style={{ color: "green" }}>{successMessage}</p>
-                  )}
+                 
                   <form
                     onSubmit={handleSubmit}
                     className="contact-contact-form-contact contact_form"
@@ -124,6 +126,7 @@ const Contact = () => {
               </center>
             </div>
           </div>
+           
         </div>
       </section>
       <div className="contact-container">
@@ -144,6 +147,7 @@ const Contact = () => {
             <i className="ti-email"></i> &nbsp; shivaconceptsolution@gmail.com
           </span>
         </h4>
+        
       </div>
     </>
   );
