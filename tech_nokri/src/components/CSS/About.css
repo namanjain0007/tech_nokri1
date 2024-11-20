@@ -1,11 +1,10 @@
-/* Container Fixes */
 .support-padding-fix {
   width: 100%;
-  height: 100vh; /* Ensure full viewport height */
+  height: 100vh; 
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the content */
+  justify-content: center; 
 }
 
 .support-container {
@@ -13,81 +12,78 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Maintain 100vh height */
-  flex-direction: column; /* Arrange items vertically if needed */
+  height: 100vh; 
+  flex-direction: column; 
 }
 
-/* Row Alignment */
+
 .row.align-items-center {
   display: flex;
-  align-items: center; /* Vertically center content */
+  align-items: center; 
   justify-content: space-between;
   width: 100%;
-  height: 100%; /* Ensure full height usage */
+  height: 100%; 
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
 
-/* Column Adjustments for 50-50 Split */
+
 .col-xl-6,
 .col-lg-6 {
   flex: 0 0 50%;
   max-width: 50%;
   padding-right: 15px;
   padding-left: 15px;
-  height: 100%; /* Ensure full height for each column */
+  height: 100%; 
 }
 
-/* Image and Caption Styling */
 .support-location-img {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Full height of the container */
+  height: 100%;
 }
 
 .support-location-img img {
-  max-height: 100%; /* Limit image height to container */
+  max-height: 100%;
   width: 100%;
   object-fit: contain;
   border-radius: 10px;
 }
 
-/* Enlarged Caption Styling */
 .support-img-cap.text-center {
   position: absolute;
-  bottom: 100px; /* Adjust vertical position */
+  bottom: 100px; 
   background: #1f2b7b;
-  padding: 30px 40px; /* Increase padding for larger size */
-  border-radius: 10px; /* Slightly larger radius */
+  padding: 30px 40px; 
+  border-radius: 10px; 
   color: white;
   text-align: center;
-  font-size: 28px; /* Increase font size for larger text */
-  font-weight: bold; /* Make text bold */
+  font-size: 28px; 
+  font-weight: bold;
   left: 4vw;
   transform: translateX(-50%);
 }
 
 .support-img-cap.text-center span {
   display: block;
-  font-size: 48px; /* Larger font size for '2024' */
+  font-size: 48px; 
   font-weight: bolder;
-  margin-top: 10px; /* Space between 'Since' and '2024' */
+  margin-top: 10px; 
 }
 
-/* Text Section Styling */
 .writing-part {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100%; /* Full height for vertical alignment */
+  height: 100%; 
   text-align: center;
 }
 
 .section-tittle2 h2 {
-  font-size: 48px; /* Bigger headings */
+  font-size: 48px;
   color: #333;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -103,19 +99,18 @@
   font-weight: bolder;
 }
 
-/* Search Button Styling */
 .support-search-btn {
-  font-size: 20px; /* Increased font size for larger text */
-  padding: 14px 24px; /* Increased padding for larger button */
+  font-size: 20px; 
+  padding: 14px 24px;
   border-radius: 6px;
-  background-color: #fb246a; /* Button background color */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth scaling and color transition */
-  color: white; /* Set button text color */
+  background-color: #fb246a;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: white; 
 }
 
 .support-search-btn:hover {
-  transform: scale(1.1); /* Slightly increase size on hover */
-  background-color: black; /* Change to black on hover */
-  color: white; /* Change text to white on hover */
+  transform: scale(1.1); 
+  background-color: black; 
+  color: white; 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
