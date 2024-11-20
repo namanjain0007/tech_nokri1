@@ -12,177 +12,176 @@ const StateByContext = ({ children }) => {
   const [logInData, setLogInData] = useState({});
   const [loading, setLoading] = useState(false);
   const [featuredData, setFeaturedData] = useState({});
-  const [appliedJobs, setAppliedJobs] = useState("");
 
-  const featuredJobs = [
-    {
-      id: 1,
-      title: "Node.js Developer",
-      companyName: "Mobulous Technologies Pvt Ltd",
-      hrName: "Preeti Mishra",
-      hrEmail: "preeti.mishra@modulous.com",
-      contactNumber: "7805063968",
-      category: "MERN Stack",
-      experienceRequired: 2,
-      postedDate: "2024-10-21",
-      expiryDate: "2024-10-28",
-      jobDescription:
-        "We are looking for experienced candidates with 1.5 to 2 years of Node.js development experience.",
-    },
-    {
-      id: 2,
-      title: "React.js Developer",
-      companyName: "Tech Innovators",
-      hrName: "Rahul Kumar",
-      hrEmail: "rahul.kumar@techinnovators.com",
-      contactNumber: "7896541230",
-      category: "Frontend Developer",
-      experienceRequired: 3,
-      postedDate: "2024-10-15",
-      expiryDate: "2024-10-30",
-      jobDescription:
-        "We are looking for a skilled React.js developer with at least 3 years of experience in building scalable frontend applications.",
-    },
-    {
-      id: 3,
-      title: "Full Stack Developer",
-      companyName: "Softgrid Solutions",
-      hrName: "Anjali Verma",
-      hrEmail: "anjali.verma@softgrid.com",
-      contactNumber: "8541236974",
-      category: "Full Stack Developer",
-      experienceRequired: 4,
-      postedDate: "2024-10-18",
-      expiryDate: "2024-11-01",
-      jobDescription:
-        "Looking for a full stack developer with expertise in both frontend and backend technologies, specifically MERN stack.",
-    },
-    {
-      id: 4,
-      title: "Backend Developer",
-      companyName: "CodeCrafters",
-      hrName: "Sumit Sharma",
-      hrEmail: "sumit.sharma@codecrafters.com",
-      contactNumber: "9012365874",
-      category: "Backend Developer",
-      experienceRequired: 2,
-      postedDate: "2024-10-20",
-      expiryDate: "2024-10-31",
-      jobDescription:
-        "We need a backend developer with experience in Node.js and database management. Candidates should have 2 years of experience.",
-    },
-    {
-      id: 5,
-      title: "Frontend Developer",
-      companyName: "Pixel Tech",
-      hrName: "Neha Gupta",
-      hrEmail: "neha.gupta@pixeltech.com",
-      contactNumber: "9912586347",
-      category: "Frontend Developer",
-      experienceRequired: 1,
-      postedDate: "2024-10-19",
-      expiryDate: "2024-10-27",
-      jobDescription:
-        "We are seeking a Frontend Developer with at least 1 year of experience in React.js and JavaScript frameworks.",
-    },
-    {
-      id: 6,
-      title: "PYTHON",
-      companyName: "Drag Tech",
-      hrName: "Neha Gupta",
-      hrEmail: "neha.gupta@pixeltech.com",
-      contactNumber: "9912586347",
-      category: "PYTHON",
-      experienceRequired: 1,
-      postedDate: "2024-10-19",
-      expiryDate: "2024-10-27",
-      jobDescription: "We are seeking a EXPERT of PYTHON.",
-    },
-    {
-      id: 7,
-      title: "Java Developer",
-      companyName: "Tech Solutions Inc.",
-      hrName: "Ravi Singh",
-      hrEmail: "ravi.singh@techsolutions.com",
-      contactNumber: "8123456789",
-      category: "JAVA",
-      experienceRequired: 3,
-      postedDate: "2024-10-24",
-      expiryDate: "2024-11-10",
-      jobDescription:
-        "We are looking for a Java Developer with strong knowledge of Java frameworks and experience in building enterprise applications.",
-    },
-    {
-      id: 8,
-      title: "Mobile App Developer",
-      companyName: "InnovaTech",
-      hrName: "Sita Rao",
-      hrEmail: "sita.rao@innovatech.com",
-      contactNumber: "9988776655",
-      category: "ANDROID",
-      experienceRequired: 2,
-      postedDate: "2024-10-22",
-      expiryDate: "2024-11-05",
-      jobDescription:
-        "Seeking a Mobile App Developer proficient in Android development with experience in Kotlin or Java.",
-    },
-    {
-      id: 9,
-      title: "Software Testing Engineer",
-      companyName: "Quality Tech",
-      hrName: "Karan Mehta",
-      hrEmail: "karan.mehta@qualitytech.com",
-      contactNumber: "8456781234",
-      category: "SOFTWARE TESTING",
-      experienceRequired: 2,
-      postedDate: "2024-10-25",
-      expiryDate: "2024-11-15",
-      jobDescription:
-        "We are hiring a Software Testing Engineer with experience in manual and automated testing processes.",
-    },
-    {
-      id: 10,
-      title: "Data Scientist",
-      companyName: "Data Insights Corp.",
-      hrName: "Aditi Sharma",
-      hrEmail: "aditi.sharma@datainsights.com",
-      contactNumber: "8765432109",
-      category: "DATA SCIENCE",
-      experienceRequired: 3,
-      postedDate: "2024-10-23",
-      expiryDate: "2024-11-20",
-      jobDescription:
-        "Looking for a Data Scientist with experience in machine learning, data analysis, and visualization techniques.",
-    },
-    {
-      id: 11,
-      title: "DevOps Engineer",
-      companyName: "Cloud Solutions",
-      hrName: "Vikram Patel",
-      hrEmail: "vikram.patel@cloudsolutions.com",
-      contactNumber: "6543210987",
-      category: "DEVOPS",
-      experienceRequired: 4,
-      postedDate: "2024-10-26",
-      expiryDate: "2024-11-25",
-      jobDescription:
-        "We are seeking a DevOps Engineer with a strong background in CI/CD pipelines, containerization, and cloud services.",
-    },
-    {
-      id: 12,
-      title: "Full Stack Developer",
-      companyName: "Web Innovators",
-      hrName: "Neeraj Sharma",
-      hrEmail: "neeraj.sharma@webinnovators.com",
-      contactNumber: "7890123456",
-      category: "MERN STACK",
-      experienceRequired: 3,
-      postedDate: "2024-10-28",
-      expiryDate: "2024-11-30",
-      jobDescription:
-        "We are looking for a Full Stack Developer with expertise in both frontend (React.js) and backend (Node.js) technologies.",
-    },
-  ];
+  // const featuredJobs = [
+  //   {
+  //     id: 1,
+  //     title: "Node.js Developer",
+  //     companyName: "Mobulous Technologies Pvt Ltd",
+  //     hrName: "Preeti Mishra",
+  //     hrEmail: "preeti.mishra@modulous.com",
+  //     contactNumber: "7805063968",
+  //     category: "MERN Stack",
+  //     experienceRequired: 2,
+  //     postedDate: "2024-10-21",
+  //     expiryDate: "2024-10-28",
+  //     jobDescription:
+  //       "We are looking for experienced candidates with 1.5 to 2 years of Node.js development experience.",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "React.js Developer",
+  //     companyName: "Tech Innovators",
+  //     hrName: "Rahul Kumar",
+  //     hrEmail: "rahul.kumar@techinnovators.com",
+  //     contactNumber: "7896541230",
+  //     category: "Frontend Developer",
+  //     experienceRequired: 3,
+  //     postedDate: "2024-10-15",
+  //     expiryDate: "2024-10-30",
+  //     jobDescription:
+  //       "We are looking for a skilled React.js developer with at least 3 years of experience in building scalable frontend applications.",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Full Stack Developer",
+  //     companyName: "Softgrid Solutions",
+  //     hrName: "Anjali Verma",
+  //     hrEmail: "anjali.verma@softgrid.com",
+  //     contactNumber: "8541236974",
+  //     category: "Full Stack Developer",
+  //     experienceRequired: 4,
+  //     postedDate: "2024-10-18",
+  //     expiryDate: "2024-11-01",
+  //     jobDescription:
+  //       "Looking for a full stack developer with expertise in both frontend and backend technologies, specifically MERN stack.",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Backend Developer",
+  //     companyName: "CodeCrafters",
+  //     hrName: "Sumit Sharma",
+  //     hrEmail: "sumit.sharma@codecrafters.com",
+  //     contactNumber: "9012365874",
+  //     category: "Backend Developer",
+  //     experienceRequired: 2,
+  //     postedDate: "2024-10-20",
+  //     expiryDate: "2024-10-31",
+  //     jobDescription:
+  //       "We need a backend developer with experience in Node.js and database management. Candidates should have 2 years of experience.",
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Frontend Developer",
+  //     companyName: "Pixel Tech",
+  //     hrName: "Neha Gupta",
+  //     hrEmail: "neha.gupta@pixeltech.com",
+  //     contactNumber: "9912586347",
+  //     category: "Frontend Developer",
+  //     experienceRequired: 1,
+  //     postedDate: "2024-10-19",
+  //     expiryDate: "2024-10-27",
+  //     jobDescription:
+  //       "We are seeking a Frontend Developer with at least 1 year of experience in React.js and JavaScript frameworks.",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "PYTHON",
+  //     companyName: "Drag Tech",
+  //     hrName: "Neha Gupta",
+  //     hrEmail: "neha.gupta@pixeltech.com",
+  //     contactNumber: "9912586347",
+  //     category: "PYTHON",
+  //     experienceRequired: 1,
+  //     postedDate: "2024-10-19",
+  //     expiryDate: "2024-10-27",
+  //     jobDescription: "We are seeking a EXPERT of PYTHON.",
+  //   },
+  //   {
+  //     id: 7,
+  //     title: "Java Developer",
+  //     companyName: "Tech Solutions Inc.",
+  //     hrName: "Ravi Singh",
+  //     hrEmail: "ravi.singh@techsolutions.com",
+  //     contactNumber: "8123456789",
+  //     category: "JAVA",
+  //     experienceRequired: 3,
+  //     postedDate: "2024-10-24",
+  //     expiryDate: "2024-11-10",
+  //     jobDescription:
+  //       "We are looking for a Java Developer with strong knowledge of Java frameworks and experience in building enterprise applications.",
+  //   },
+  //   {
+  //     id: 8,
+  //     title: "Mobile App Developer",
+  //     companyName: "InnovaTech",
+  //     hrName: "Sita Rao",
+  //     hrEmail: "sita.rao@innovatech.com",
+  //     contactNumber: "9988776655",
+  //     category: "ANDROID",
+  //     experienceRequired: 2,
+  //     postedDate: "2024-10-22",
+  //     expiryDate: "2024-11-05",
+  //     jobDescription:
+  //       "Seeking a Mobile App Developer proficient in Android development with experience in Kotlin or Java.",
+  //   },
+  //   {
+  //     id: 9,
+  //     title: "Software Testing Engineer",
+  //     companyName: "Quality Tech",
+  //     hrName: "Karan Mehta",
+  //     hrEmail: "karan.mehta@qualitytech.com",
+  //     contactNumber: "8456781234",
+  //     category: "SOFTWARE TESTING",
+  //     experienceRequired: 2,
+  //     postedDate: "2024-10-25",
+  //     expiryDate: "2024-11-15",
+  //     jobDescription:
+  //       "We are hiring a Software Testing Engineer with experience in manual and automated testing processes.",
+  //   },
+  //   {
+  //     id: 10,
+  //     title: "Data Scientist",
+  //     companyName: "Data Insights Corp.",
+  //     hrName: "Aditi Sharma",
+  //     hrEmail: "aditi.sharma@datainsights.com",
+  //     contactNumber: "8765432109",
+  //     category: "DATA SCIENCE",
+  //     experienceRequired: 3,
+  //     postedDate: "2024-10-23",
+  //     expiryDate: "2024-11-20",
+  //     jobDescription:
+  //       "Looking for a Data Scientist with experience in machine learning, data analysis, and visualization techniques.",
+  //   },
+  //   {
+  //     id: 11,
+  //     title: "DevOps Engineer",
+  //     companyName: "Cloud Solutions",
+  //     hrName: "Vikram Patel",
+  //     hrEmail: "vikram.patel@cloudsolutions.com",
+  //     contactNumber: "6543210987",
+  //     category: "DEVOPS",
+  //     experienceRequired: 4,
+  //     postedDate: "2024-10-26",
+  //     expiryDate: "2024-11-25",
+  //     jobDescription:
+  //       "We are seeking a DevOps Engineer with a strong background in CI/CD pipelines, containerization, and cloud services.",
+  //   },
+  //   {
+  //     id: 12,
+  //     title: "Full Stack Developer",
+  //     companyName: "Web Innovators",
+  //     hrName: "Neeraj Sharma",
+  //     hrEmail: "neeraj.sharma@webinnovators.com",
+  //     contactNumber: "7890123456",
+  //     category: "MERN STACK",
+  //     experienceRequired: 3,
+  //     postedDate: "2024-10-28",
+  //     expiryDate: "2024-11-30",
+  //     jobDescription:
+  //       "We are looking for a Full Stack Developer with expertise in both frontend (React.js) and backend (Node.js) technologies.",
+  //   },
+  // ];
 
   const courses = [
     "MERN STACK",
@@ -211,6 +210,33 @@ const StateByContext = ({ children }) => {
     "5 Year",
     "6 + Year",
   ];
+
+  const testimonials = [
+    {
+      name: "Margaret Lawson",
+      position: "Creative Director",
+      image:
+        "https://www.technokri.com/assets/img/testmonial/testimonial-founder.png",
+      quote:
+        "I am at an age where I just want to be fit and healthy. Our bodies are our responsibility! Start caring for your body, and it will care for you. Eat clean, work out hard.",
+    },
+    {
+      name: "Vishal Parmar",
+      position: "Creative Director",
+      image: "https://www.technokri.com/assets/img/testmonial/3.jpg",
+      quote:
+        "Staying fit is a lifestyle choice. I believe in regular exercise, clean eating, and mental peace to maintain a healthy balance.",
+    },
+    {
+      name: "John Doe",
+      position: "Marketing Head",
+      image:
+        "https://www.technokri.com/assets/img/testmonial/testimonial-founder.png",
+      quote:
+        "Fitness is about consistency and motivation. If you stay on track, your body will repay you in the long run. Eat well, work out, and maintain a positive mindset.",
+    },
+  ];
+
   const technologies = [
     {
       name: "MERN Stack",
@@ -374,31 +400,6 @@ const StateByContext = ({ children }) => {
       describtion: "BOOTSTRAP",
     },
   ];
-  const testimonials = [
-    {
-      name: "Margaret Lawson",
-      position: "Creative Director",
-      image:
-        "https://www.technokri.com/assets/img/testmonial/testimonial-founder.png",
-      quote:
-        "I am at an age where I just want to be fit and healthy. Our bodies are our responsibility! Start caring for your body, and it will care for you. Eat clean, work out hard.",
-    },
-    {
-      name: "Vishal Parmar",
-      position: "Creative Director",
-      image: "https://www.technokri.com/assets/img/testmonial/3.jpg",
-      quote:
-        "Staying fit is a lifestyle choice. I believe in regular exercise, clean eating, and mental peace to maintain a healthy balance.",
-    },
-    {
-      name: "John Doe",
-      position: "Marketing Head",
-      image:
-        "https://www.technokri.com/assets/img/testmonial/testimonial-founder.png",
-      quote:
-        "Fitness is about consistency and motivation. If you stay on track, your body will repay you in the long run. Eat well, work out, and maintain a positive mindset.",
-    },
-  ];
 
   const availableJobs = [
     {
@@ -415,7 +416,6 @@ const StateByContext = ({ children }) => {
       developer: "MERN STACK DEVELOPER",
       availability: "yes",
       id: "124",
-
       posted: "Posted 2024-10-26",
       experience: "Fresher",
       describtion: "MERN STACK DEVELOPER",
@@ -956,12 +956,10 @@ const StateByContext = ({ children }) => {
         setLogInData,
         loading,
         setLoading,
-        featuredJobs,
+        // featuredJobs,
         featuredData,
         setFeaturedData,
         jobs,
-        appliedJobs,
-        setAppliedJobs,
       }}
     >
       {children}
