@@ -10,6 +10,7 @@ const {
   register,
   login,
   getProfile,
+  check,
 } = require("../controllers/auth-controllers");
 
 router.route("/").get(home);
@@ -21,5 +22,6 @@ router.route("/login").post(login);
 // router.route("/auth/validate").get(getProfile);
 // router.route("/validate").get(authenticateToken, getProfile);
 router.route("/validate").get(getProfile);
+router.route("/check").post(check);
 
 module.exports = router;
