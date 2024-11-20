@@ -1,18 +1,51 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Context from "../Context/Context";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./CSS/Profile_page.css"; // Import the CSS file
+import axios from "axios";
 // import Jobs from "./pages/Find Jobs/Jobs";
 // import Cookies from "js-cookie"; // Cookie se token retrieve karne ke liye
 
 const ProfilePage = () => {
-  const { logInData, setIsLoggedIn, featuredData, jobs, setLogInData } =
-    useContext(Context);
+  const {
+    logInData,
+    setIsLoggedIn,
+    featuredData,
+    setFeaturedData,
+    jobs,
+    setLogInData,
+  } = useContext(Context);
   const [toggleSlidebar, setToggleSlidebar] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  // console.log(featuredData);
+  const [check, setCheck] = useState("");
+  const [numofAppliedJobs, setNumOfAppliedJobs] = useState("");
 
+  useEffect(() => {
+    async function checkApplied() {
+      try {
+        const response = await axios.post(
+          "https://tech-nokri1.onrender.com/check",
+          { id: featuredData.id },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        console.log("abcd", response.data);
+        if (response.data.isDataExists) {
+          setCheck(true);
+        } else {
+          setCheck(false);
+        }
+        setNumOfAppliedJobs(response.data.len);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    checkApplied();
+  }, [setFeaturedData, featuredData]);
   return (
     <div className="ProfilePage d-flex">
       {/* Sidebar */}
@@ -45,7 +78,10 @@ const ProfilePage = () => {
           <br />
 
           {/* View All Jobs Button */}
-          <button className="ProfilePage-btn ProfilePage-btn-primary mt-3">
+          <button
+            onClick={() => navigate("/findajob")}
+            className="ProfilePage-btn ProfilePage-btn-primary mt-3"
+          >
             <i className="fas fa-eye"></i> View All Jobs
           </button>
           <br />
@@ -87,7 +123,7 @@ const ProfilePage = () => {
               {jobs.length} Jobs Found
             </span>
             <span className="ProfilePage-job-count ProfilePage-job-count-applied">
-              0 Jobs Applied
+              {`${numofAppliedJobs} Jobs Applied`}
             </span>
           </div>
         </div>
@@ -128,20 +164,34 @@ const ProfilePage = () => {
                   <b>Job Description:</b> {featuredData.description}
                 </p>
               </div>
-              {/* <NavLink
-                className="ProfilePage-form-container-button"
-                to="/jobRegistration"
-              >
-                Apply Now
-              </NavLink> */}
-              <button
+
+              {/* <button
                 className="ProfilePage-form-container-button"
                 onClick={() =>
                   navigate(`/jobregistration?job_id=${featuredData.id}`)
                 }
               >
                 Apply Now
-              </button>
+              </button> */}
+              {check ? (
+                <button
+                  disabled
+                  style={{ background: "silver", color: "white", width: "8vw" }}
+                >
+                  {/* Apply Now */}
+                  Already applied
+                </button>
+              ) : (
+                <button
+                  className="ProfilePage-form-container-button"
+                  onClick={() =>
+                    navigate(`/jobregistration?job_id=${featuredData.id}`)
+                  }
+                >
+                  Apply Now
+                  {/* {btnName} */}
+                </button>
+              )}
             </div>
           </div>
         ) : (
