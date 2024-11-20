@@ -140,11 +140,7 @@ const Footer = () => {
                     ©{new Date().getFullYear()} All Rights Reserved. Developed
                     by Kangaroosoftware.net
                     <i className="fa-solid fa-heart"></i> by
-                    {/* <a
-                      href="https://kangaroosoftware.net/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    /> */}
+                   
                   </p>
                 </div>
               </div>
