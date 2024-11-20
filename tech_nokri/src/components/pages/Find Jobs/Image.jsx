@@ -4,7 +4,7 @@ const Image = ({ title }) => {
       <div>
         <div className="main-container">
           <div className="title">
-            <h2>{title !== "" ? title : "Ayush"}</h2>
+            <h2>{title !== "" ? title : ""}</h2>
           </div>
         </div>
       </div>
