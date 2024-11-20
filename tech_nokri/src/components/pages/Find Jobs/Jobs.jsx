@@ -10,7 +10,6 @@ const Jobs = ({ classname, technologies }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedJob, setSelectedJob] = useState("");
 
-  // function getData() {}
 
   function handleClick(availability, id, tech) {
     if (isLoggedIn) {
@@ -19,7 +18,6 @@ const Jobs = ({ classname, technologies }) => {
           (item) => item.technology === tech.technology
           // "PYTHON DEVELOPER" || {}
         );
-        // console.log("ayush", job);
         setFeaturedData(job);
         navigate(`/view_moredetails?job_id=${id}`);
       } else {
