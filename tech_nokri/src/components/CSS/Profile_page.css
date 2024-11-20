@@ -316,7 +316,8 @@
   transition: transform 0.4s ease, background 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  /* cursor: pointer;+
+   */
 }
 
 .ProfilePage-job-count:before {
