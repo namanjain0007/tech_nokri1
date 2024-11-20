@@ -9,7 +9,6 @@ const OnlineCv = ({ title, path, btnName }) => {
           <div className="rowjustify-content-center">
             <div className="col-xl-10">
               <div className="cv-captiontext-center">
-                {/* FEATURED TOURS Packages */}
                 <p className="pera2">{title}</p>
                 <button
                   onClick={() => navigate(path)}
