@@ -1,4 +1,5 @@
 const User = require("../models/user-model");
+const Job_application = require("../models/job_application");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -143,4 +144,17 @@ const getProfile = async (req, res) => {
   }
 };
 
-module.exports = { home, register, login, getProfile };
+const check = async (req, res) => {
+  try {
+    const { id } = req.body;
+    const isDataExists = !!(await Job_application.findOne({ job_id: id }));
+    const len = await Job_application.countDocuments({});
+    // console.log("len", len);
+    // console.log("data", checkData);
+
+    return res.status(200).json({ isDataExists, len });
+  } catch (error) {
+    return res.status(401).json({ msg: "not recieved id" });
+  }
+};
+module.exports = { home, register, login, getProfile, check };
