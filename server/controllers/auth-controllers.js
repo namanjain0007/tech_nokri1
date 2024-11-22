@@ -172,8 +172,9 @@ const checkAppliedJobs = async (req, res) => {
 
 const checkJobId = async (req, res) => {
   try {
-    const { id } = req.body;
+    const { id,_id } = req.body;
     const isDataExists = !!(await Job_application.findOne({
+user_id:_id,
       job_id: id.toString(),
     }));
 
