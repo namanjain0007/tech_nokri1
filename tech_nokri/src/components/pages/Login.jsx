@@ -1,10 +1,11 @@
-import { NavLink,useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../CSS/Login.css";
 import { useContext, useState } from "react";
 import Context from "../../Context/Context";
 import axios from "axios";
 const Login = () => {
-  const { setLogInData, setIsLoggedIn } = useContext(Context);
+  const { setLogInData, setIsLoggedIn, setTotalAppliedJobs } =
+    useContext(Context);
   const [user, setUser] = useState({ email: "", password: "" });
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
@@ -18,7 +19,7 @@ const Login = () => {
     // console.log(user);
 
     try {
-      const response = await axios.post("https://tech-nokri1.onrender.com/login", user, {
+      const response = await axios.post("http://localhost:5012/login", user, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -27,11 +28,35 @@ const Login = () => {
       setSuccessMessage("Login successful");
       setErrorMessage("");
 
-      // console.log("LOGIN response.token", response);
+      // console.log("LOGIN data", response.data.user)  ;
       // alert("User login successfully");
       if (response.status === 200) {
         sessionStorage.setItem("jwt", response.data.token);
         setLogInData(response.data.user);
+        try {
+          async function checkApplied() {
+            try {
+              const response2 = await axios.post(
+                "https://tech-nokri1.onrender.com/checkappliedjobs",
+                { _id: response.data.user._id },
+                {
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                }
+              );
+              console.log("loginpage", response2);
+              setTotalAppliedJobs(response2.data.count);
+
+              // console.log("len", response.data.len);
+            } catch (error) {
+              console.log(error);
+            }
+          }
+          checkApplied();
+        } catch (error) {
+          console.log(error);
+        }
         setSuccessMessage("Login successful!");
         setTimeout(() => {
           setIsLoggedIn(true);
