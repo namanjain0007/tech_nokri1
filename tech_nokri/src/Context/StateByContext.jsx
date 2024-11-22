@@ -12,6 +12,7 @@ const StateByContext = ({ children }) => {
   const [logInData, setLogInData] = useState({});
   const [loading, setLoading] = useState(false);
   const [featuredData, setFeaturedData] = useState({});
+  const [totalAppliedJobs, setTotalAppliedJobs] = useState("");
 
   // const featuredJobs = [
   //   {
@@ -960,6 +961,8 @@ const StateByContext = ({ children }) => {
         featuredData,
         setFeaturedData,
         jobs,
+        totalAppliedJobs,
+        setTotalAppliedJobs,
       }}
     >
       {children}
