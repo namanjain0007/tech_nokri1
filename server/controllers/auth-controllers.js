@@ -144,17 +144,49 @@ const getProfile = async (req, res) => {
   }
 };
 
-const check = async (req, res) => {
+// const check = async (req, res) => {
+//   try {
+//     const { id } = req.body;
+//     const isDataExists = !!(await Job_application.findOne({ job_id: id }));
+//     const len = await Job_application.countDocuments({});
+//     // console.log("len", len);
+//     // console.log("data", checkData);
+
+//     return res.status(200).json({ isDataExists, len });
+//   } catch (error) {
+//     return res.status(401).json({ msg: "not recieved id" });
+//   }
+// };
+
+const checkAppliedJobs = async (req, res) => {
+  try {
+    const { _id } = req.body;
+    const totalAppliedJobs = await Job_application.countDocuments({
+      user_id: _id,
+    });
+    return res.status(200).json({ count: totalAppliedJobs });
+  } catch (error) {
+    return res.status(401).json({ msg: "not recieved user_id" });
+  }
+};
+
+const checkJobId = async (req, res) => {
   try {
     const { id } = req.body;
-    const isDataExists = !!(await Job_application.findOne({ job_id: id }));
-    const len = await Job_application.countDocuments({});
-    // console.log("len", len);
-    // console.log("data", checkData);
+    const isDataExists = !!(await Job_application.findOne({
+      job_id: id.toString(),
+    }));
 
-    return res.status(200).json({ isDataExists, len });
+    return res.status(200).json({ isDataExists });
   } catch (error) {
     return res.status(401).json({ msg: "not recieved id" });
   }
 };
-module.exports = { home, register, login, getProfile, check };
+module.exports = {
+  home,
+  register,
+  login,
+  getProfile,
+  checkJobId,
+  checkAppliedJobs,
+};
