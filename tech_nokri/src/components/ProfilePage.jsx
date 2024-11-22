@@ -33,8 +33,8 @@ const ProfilePage = () => {
             },
           }
         );  
-        console.log("id",featuredData.id);
-                console.log("abcd", response.data);
+        // console.log("id",featuredData.id);
+        //         console.log("abcd", response.data);
 
         if (response.data.isDataExists) {
           setCheck(true);
