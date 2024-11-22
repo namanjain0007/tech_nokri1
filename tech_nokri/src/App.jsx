@@ -161,7 +161,6 @@ const App = () => {
           try {
             async function checkApplied() {
               try {
-                // console.log("andr aaya");
                 const response2 = await axios.post(
                   "https://tech-nokri1.onrender.com/checkappliedjobs",
                   { _id: response.data.user._id },
@@ -171,7 +170,7 @@ const App = () => {
                     },
                   }
                 );
-                console.log("app", response2);
+                // console.log("app", response2);
                 setTotalAppliedJobs(response2.data.count);
 
                 // console.log("len", response.data.len);
