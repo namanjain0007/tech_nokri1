@@ -45,10 +45,8 @@ const Login = () => {
                   },
                 }
               );
-              console.log("loginpage", response2);
               setTotalAppliedJobs(response2.data.count);
 
-              // console.log("len", response.data.len);
             } catch (error) {
               console.log(error);
             }
