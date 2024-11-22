@@ -4,7 +4,8 @@ import "./CSS/JobRegistration.css";
 import axios from "axios";
 
 const JobRegistration = () => {
-  const { logInData, courses, featuredData } = useContext(Context);
+  const { logInData, courses, featuredData, setTotalAppliedJobs } =
+    useContext(Context);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -47,7 +48,25 @@ const JobRegistration = () => {
       );
 
       if (response.status === 200) {
-        // alert("Registration successful!");
+        async function checkApplied() {
+          try {
+            const response2 = await axios.post(
+              "https://tech-nokri1.onrender.com/checkappliedjobs",
+              { _id: logInData._id },
+              {
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            );
+            setTotalAppliedJobs(response2.data.count);
+
+            console.log("jobregistration", response2.data.count);
+          } catch (error) {
+            console.log(error);
+          }
+        }
+        checkApplied();
         // console.log("Form data submitted successfully:", response);
         setTimeout(() => {
           setSuccessMessage("Application submitted successfully.");
