@@ -33,7 +33,8 @@ const ProfilePage = () => {
             },
           }
         );
-        
+                console.log("abcd", response.data);
+
         if (response.data.isDataExists) {
           setCheck(true);
         } else {
