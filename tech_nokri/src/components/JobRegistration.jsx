@@ -61,7 +61,7 @@ const JobRegistration = () => {
             );
             setTotalAppliedJobs(response2.data.count);
 
-            console.log("jobregistration", response2.data.count);
+            // console.log("jobregistration", response2.data.count);
           } catch (error) {
             console.log(error);
           }
