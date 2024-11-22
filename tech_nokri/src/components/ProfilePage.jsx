@@ -32,7 +32,8 @@ const ProfilePage = () => {
               "Content-Type": "application/json",
             },
           }
-        );
+        );  
+        console.log(("id",featuredData.id)
                 console.log("abcd", response.data);
 
         if (response.data.isDataExists) {
