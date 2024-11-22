@@ -10,7 +10,8 @@ const {
   register,
   login,
   getProfile,
-  check,
+  checkJobId,
+  checkAppliedJobs,
 } = require("../controllers/auth-controllers");
 
 router.route("/").get(home);
@@ -22,6 +23,8 @@ router.route("/login").post(login);
 // router.route("/auth/validate").get(getProfile);
 // router.route("/validate").get(authenticateToken, getProfile);
 router.route("/validate").get(getProfile);
-router.route("/check").post(check);
+
+router.route("/checkappliedjobs").post(checkAppliedJobs);
+router.route("/checkJobId").post(checkJobId);
 
 module.exports = router;
