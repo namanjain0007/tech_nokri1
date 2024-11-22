@@ -26,7 +26,7 @@ const ProfilePage = () => {
       try {
         const response = await axios.post(
           "https://tech-nokri1.onrender.com/checkJobId",
-          { id: featuredData.id },
+          { id: featuredData.id,_id:logInData._id },
           {
             headers: {
               "Content-Type": "application/json",
