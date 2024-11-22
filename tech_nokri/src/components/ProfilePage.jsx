@@ -14,18 +14,18 @@ const ProfilePage = () => {
     setFeaturedData,
     jobs,
     setLogInData,
+    totalAppliedJobs,
   } = useContext(Context);
   const [toggleSlidebar, setToggleSlidebar] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const [check, setCheck] = useState("");
-  const [numofAppliedJobs, setNumOfAppliedJobs] = useState("");
 
   useEffect(() => {
     async function checkApplied() {
       try {
         const response = await axios.post(
-          "https://tech-nokri1.onrender.com/check",
+          "https://tech-nokri1.onrender.com/checkJobId",
           { id: featuredData.id },
           {
             headers: {
@@ -33,19 +33,21 @@ const ProfilePage = () => {
             },
           }
         );
-        // console.log("abcd", response.data);
+        console.log("abcd", response.data);
         if (response.data.isDataExists) {
           setCheck(true);
         } else {
           setCheck(false);
         }
-        setNumOfAppliedJobs(response.data.len);
+        // setTotalAppliedJobs(response.data.len);
       } catch (error) {
         console.log(error);
       }
     }
-    checkApplied();
-  }, [setFeaturedData, featuredData]);
+    if (location.pathname === "/view_moredetails") {
+      checkApplied();
+    }
+  }, [setFeaturedData]);
   return (
     <div className="ProfilePage d-flex">
       {/* Sidebar */}
@@ -123,7 +125,7 @@ const ProfilePage = () => {
               {jobs.length} Jobs Found
             </span>
             <span className="ProfilePage-job-count ProfilePage-job-count-applied">
-              {`${numofAppliedJobs} Jobs Applied`}
+              {`${totalAppliedJobs} Jobs Applied`}
             </span>
           </div>
         </div>
