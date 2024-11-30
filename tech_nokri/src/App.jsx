@@ -64,10 +64,8 @@ const App = () => {
   //     }
 
   //     try {
-  //       // JWT ko decode kar rahe hain
   //       const decodedToken = jwtDecode(token);
 
-  //       // Expiry check kar rahe hain
   //       const currentTime = Date.now() / 1000; // Current time in seconds
   //       if (decodedToken.exp < currentTime) {
   //         Cookies.remove("jwt");
@@ -78,17 +76,16 @@ const App = () => {
   //         return;
   //       }
 
-  //       // Agar token valid hai, server se validate karo
   //       const response = await axios.get("http://localhost:5012/validate", {
   //         headers: {
-  //           Authorization: `Bearer ${token}`, // Token ko Authorization header me bhejna
+  //           Authorization: `Bearer ${token}`, 
   //         },
-  //         withCredentials: true, // Cookies ko bhejna
+  //         withCredentials: true, 
   //       });
 
   //       if (response.status === 200) {
   //         setIsLoggedIn(true);
-  //         setLogInData(response.data.user); // Server se milta user data
+  //         setLogInData(response.data.user);
   //         console.log("authorized");
   //       }
   //     } catch (error) {
@@ -101,7 +98,6 @@ const App = () => {
 
   //   checkToken();
   // }, []);
-  // Empty dependency array, sirf mount hone par chalega
 
   // useEffect(() => {
   //   const loggedInStatus = localStorage.getItem("isLoggedIn");
@@ -130,7 +126,6 @@ const App = () => {
       }
 
       try {
-        // Token decode karke expiry check karte hain
 
         const decodedToken = jwtDecode(token);
 
@@ -206,9 +201,8 @@ const App = () => {
   }, [location.pathname, isLoggedIn, navigate]);
 
   useEffect(() => {
-    // Agar user logged in hai aur profile page pe jaana chah raha hai, toh profile page dikhaye
     if (isLoggedIn && location.pathname === "/login") {
-      navigate("/profile_page"); // Redirecting to profile page if logged in and user is on login page
+      navigate("/profile_page"); 
     }
   }, [isLoggedIn, location.pathname, navigate]);
 
