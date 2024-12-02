@@ -65,11 +65,11 @@ const ProfilePage = () => {
           <p>{logInData.username}</p>
 
           {/* Edit Profile Button */}
-          <button className="ProfilePage-btn ProfilePage-btn-secondary mt-3">
+{/*           <button className="ProfilePage-btn ProfilePage-btn-secondary mt-3">
             <i className="fas fa-edit"></i> Edit Profile
           </button>
           <br />
-          <br />
+          <br /> */}
 
           {/* Toggle Details Button */}
           <button
