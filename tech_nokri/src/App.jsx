@@ -160,17 +160,6 @@ const App = () => {
             <Route path="/category_jobs" element={<CategoryJobs />} />
             <Route path="/jobregistration" element={<JobRegistration />} />
 
-            {/* {!isLoggedIn && location.path === "/profile_page" ? (
-              navigate("/login")
-            ) : (
-              <Route path="/profile_page" element=<ProfilePage /> />
-            )} */}
-
-            {/* <Route
-              path="/profile_page"
-              element={isLoggedIn ? <ProfilePage /> : <Login />}
-            /> */}
-            {/* )} */}
             {isLoggedIn && (
               <Route path="/profile_page" element=<ProfilePage /> />
             )}
