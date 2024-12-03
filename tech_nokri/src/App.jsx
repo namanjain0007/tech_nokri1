@@ -53,69 +53,6 @@ const App = () => {
     }, 500);
   }, [location.pathname, location.search, setLoading]);
 
-  // useEffect(() => {
-  //   const checkToken = async () => {
-  //     const token = Cookies.get("jwt");
-
-  //     if (!token) {
-  //       setIsLoggedIn(false);
-  //       setLogInData({});
-  //       return;
-  //     }
-
-  //     try {
-  //       const decodedToken = jwtDecode(token);
-
-  //       const currentTime = Date.now() / 1000; // Current time in seconds
-  //       if (decodedToken.exp < currentTime) {
-  //         Cookies.remove("jwt");
-  //         setIsLoggedIn(false);
-  //         setLogInData({});
-  //         console.warn("Token expired, logging out.");
-  //         alert("oops session expired");
-  //         return;
-  //       }
-
-  //       const response = await axios.get("http://localhost:5012/validate", {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`, 
-  //         },
-  //         withCredentials: true, 
-  //       });
-
-  //       if (response.status === 200) {
-  //         setIsLoggedIn(true);
-  //         setLogInData(response.data.user);
-  //         console.log("authorized");
-  //       }
-  //     } catch (error) {
-  //       console.error("Token validation failed:", error);
-  //       Cookies.remove("jwt");
-  //       setIsLoggedIn(false);
-  //       setLogInData({});
-  //     }
-  //   };
-
-  //   checkToken();
-  // }, []);
-
-  // useEffect(() => {
-  //   const loggedInStatus = localStorage.getItem("isLoggedIn");
-  //   const storedUser = localStorage.getItem("logInData");
-
-  //   if (loggedInStatus === "true") {
-  //     setIsLoggedIn(true);
-
-  //     if (storedUser) {
-  //       const userObject = JSON.parse(storedUser);
-  //       setLogInData(userObject);
-  //       // console.log("abcd", userObject);
-  //     }
-  //   } else {
-  //     setIsLoggedIn(false);
-  //   }
-  // }, [setIsLoggedIn, setLogInData]);
-
   useEffect(() => {
     const checkToken = async () => {
       const token = sessionStorage.getItem("jwt");
@@ -165,10 +102,8 @@ const App = () => {
                     },
                   }
                 );
-                // console.log("app", response2);
                 setTotalAppliedJobs(response2.data.count);
 
-                // console.log("len", response.data.len);
               } catch (error) {
                 console.log(error);
               }
@@ -190,7 +125,6 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    // console.log("isLoggedIn: ", isLoggedIn);
     if (
       (!isLoggedIn && location.pathname === "/profile_page") ||
       (!isLoggedIn && location.pathname.includes("view_moredetails"))
@@ -198,13 +132,10 @@ const App = () => {
       navigate("/login");
       // console.log("abc");
     }
-  }, [location.pathname, isLoggedIn, navigate]);
-
-  useEffect(() => {
-    if (isLoggedIn && location.pathname === "/login") {
-      navigate("/profile_page"); 
+    else if (isLoggedIn && location.pathname === "/login") {
+      navigate("/profile_page");
     }
-  }, [isLoggedIn, location.pathname, navigate]);
+  }, [location.pathname, isLoggedIn, navigate]);
 
   return (
     <div>
