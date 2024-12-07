@@ -18,8 +18,7 @@ const Courses = ({ classname }) => {
   function handleSearch() {
     setCourseVal(tempVal);
     setCatTechName(tempVal.course);
-    // console.log("aaa", tempVal);
-
+    
     // const technology = findTechnology();
     // let technology = {};
     // if (courseVal.course) {
