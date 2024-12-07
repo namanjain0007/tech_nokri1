@@ -33,8 +33,6 @@ const App = () => {
   const location = useLocation();
   const isProfilePage = location.pathname === "/profile_page";
   const isViewMore = location.pathname.includes("view_moredetails");
-  const isPage404 = location.pathname === "/*";
-  const is404Page = location.pathname.includes("/*");
 
   const {
     isLoggedIn,
@@ -144,7 +142,7 @@ const App = () => {
         <Preloader />
       ) : (
         <>
-          {!isProfilePage && !isPage404 && !is404Page && !isViewMore && (
+          {!isProfilePage && !isViewMore && (
             <NavBar />
           )}
           {/* <ScrollTop /> */}
@@ -169,7 +167,7 @@ const App = () => {
             <Route path="/payment_gateway" element={<PaymentGateway />} />
             <Route path="/*" element={<Page404 />} />
           </Routes>
-          {!isProfilePage && !isPage404 && !is404Page && !isViewMore && (
+          {!isProfilePage && !isViewMore && (
             <Footer />
           )}
         </>
