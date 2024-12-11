@@ -1,6 +1,3 @@
-Yahan ek **README.md** file ka template diya gaya hai jo tumhare **Tech Nokri** project ke liye kaam aayega. Tum ise customize kar sakte ho apne specific requirements ke hisaab se.
-
-```markdown
 # Tech Nokri
 
 Tech Nokri is a MERN stack application designed to simplify the job search process. It allows users to find jobs based on their courses and qualifications, apply for them directly, and manage their applications efficiently.
@@ -86,26 +83,3 @@ tech-nokri/
    git push origin feature-name
    ```
 5. Open a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-
-For any queries or suggestions, feel free to contact:
-
-- **Email**: your-email@example.com
-- **GitHub**: [your-username](https://github.com/your-username)
-
----
-
-Feel free to contribute and make this project even better! 🎉
-```
-
-### Notes:
-1. Replace **`your-username`** and **`your-email@example.com`** with your actual details.
-2. If you use any additional tools or technologies, add them under the **Tech Stack** section.
-3. If you have specific usage instructions, include them as well.
-
-Yeh file tumhari GitHub repository ko professional aur organized dikhayegi.
