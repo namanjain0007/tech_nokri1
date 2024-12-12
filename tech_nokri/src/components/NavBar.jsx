@@ -12,6 +12,7 @@ const NavBar = () => {
           <div className="navbar-image-div">
             <NavLink to="/">
               <img
+                style={{height:'12vh'}
                 src="https://www.technokri.com/assets/img/logo/logo.png"
                 alt="Company Logo"
               />
