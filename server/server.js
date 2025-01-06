@@ -13,20 +13,20 @@ const jobApplicationRouter = require("./router/job_application-router");
 server.use(
   cors({
     origin: "https://tech-nokri1-frontend.onrender.com", // Frontend ka URL
-    credentials: true, // Cookies allow karna
+    // credentials: true, // Cookies allow karna
   })
 );
 
-server.use(
-  session({
-    secret: "yourSecretKey123", // Secret key (use a strong key in production)
-    resave: false,
-    saveUninitialized: true,
-    cookie: {
-      httpOnly: true, // Security ke liye httpOnly
-    },
-  })
-);
+// server.use(
+//   session({
+//     secret: "yourSecretKey123", // Secret key (use a strong key in production)
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: {
+//       httpOnly: true, // Security ke liye httpOnly
+//     },
+//   })
+// );
 // server.use(cookieParser());
 
 const PORT = 5012;
