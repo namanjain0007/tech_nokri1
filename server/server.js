@@ -11,8 +11,7 @@ const jobApplicationRouter = require("./router/job_application-router");
 server.use(
   cors({
     origin: "https://tech-nokri1-frontend.onrender.com", // Frontend URL
-    allowedHeaders: ["Content-Type", "Authorization"], // Allow Content-Type and Authorization headers
-    credentials: false, 
+    credentials: true, 
   })
 );
 
