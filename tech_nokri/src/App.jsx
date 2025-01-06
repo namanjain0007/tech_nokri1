@@ -62,20 +62,7 @@ const App = () => {
 
       try {
 
-        // const decodedToken = jwtDecode(token);
-
-        // const currentTime = Date.now() / 1000; // Current time in seconds
-
-        // if (decodedToken.exp < currentTime) {
-        //   sessionStorage.removeItem("jwt");
-        //   setIsLoggedIn(false);
-        //   setLogInData({});
-        //   console.warn("Token expired, logging out.");
-        //   alert("Oops! Session expired.");
-        //   return;
-        // }
-
-        const response = await axios.get(
+   const response = await axios.get(
           "https://tech-nokri1.onrender.com/validate",
           {
             headers: {
