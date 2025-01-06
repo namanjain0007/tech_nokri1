@@ -81,7 +81,6 @@ const App = () => {
             headers: {
               Authorization: `Bearer ${token}`,
             },
-            // withCredentials: true,
           }
         );
 
