@@ -65,7 +65,7 @@ userSchema.methods.generateToken = async function () {
       },
       "yourSecretKey123", // Secret key
       {
-        expiresIn: "30d", // Token expiry time
+        expiresIn: "5s", // Token expiry time
       }
     );
   } catch (error) {
