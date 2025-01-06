@@ -2,8 +2,6 @@ const express = require("express");
 const server = express();
 
 const cors = require("cors");
-// const cookieParser = require("cookie-parser");
-const session = require("express-session"); // session import
 
 const connectDb = require("./utils/db");
 const router = require("./router/auth-router");
@@ -17,17 +15,7 @@ server.use(
   })
 );
 
-// server.use(
-//   session({
-//     secret: "yourSecretKey123", // Secret key (use a strong key in production)
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: {
-//       httpOnly: true, // Security ke liye httpOnly
-//     },
-//   })
-// );
-// server.use(cookieParser());
+
 
 const PORT = 5012;
 
