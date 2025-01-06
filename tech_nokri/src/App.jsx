@@ -26,7 +26,7 @@ import PaymentGateway from "./components/pages/PaymentGateway";
 import JobRegistration from "./components/JobRegistration";
 // import { login } from "../../server/controllers/auth-controllers";
 // import Cookies from "js-cookie"; // Cookie se token retrieve karne ke liye
-import { jwtDecode } from "jwt-decode";
+// import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 
 const App = () => {
