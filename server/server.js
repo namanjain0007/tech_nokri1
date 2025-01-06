@@ -13,7 +13,7 @@ const jobApplicationRouter = require("./router/job_application-router");
 server.use(
   cors({
     origin: "https://tech-nokri1-frontend.onrender.com", // Frontend ka URL
-    // credentials: true, // Cookies allow karna
+    credentials: true, // Cookies allow karna
   })
 );
 
